@@ -1,0 +1,118 @@
+@import '/src/components/commonComponents/scss/mixins.utils.scss';
+.filterPopup {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  left: -295px;
+  padding: 15px 20px;
+  position: absolute;
+  top: 0;
+  width: 285px;
+
+  &Options {
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 11px;
+
+    &Between {
+      align-items: center;
+      @include flex-justify(space-between);
+      padding-bottom: 11px;
+
+      > input {
+        background: #f9f9fb;
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+        height: 38px;
+        outline-color: #ccafe7;
+        width: 100px;
+      }
+    }
+
+    &Other {
+      display: flex;
+      padding-bottom: 11px;
+
+      > input {
+        background: #f9f9fb;
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+        height: 38px;
+        width: 125px;
+      }
+    }
+
+    :global(.ant-radio-checked) {
+      &::after {
+        border: 1px solid #7f4ead !important;
+      }
+
+      :global(.ant-radio-inner) {
+        border: 5px solid #7f4ead !important;
+
+        &::after {
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+
+  &Check {
+    display: flex;
+    padding-bottom: 11px;
+
+    :global(.ant-checkbox-wrapper) {
+      align-items: unset;
+    }
+
+    > p {
+      margin-bottom: 0;
+    }
+  }
+
+  &InputContainer {
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 1rem;
+    padding-bottom: 11px;
+  }
+
+  &Buttons {
+    @include flex-justify(flex-end);
+    padding-top: 11px;
+
+    > button {
+      margin-left: 10px;
+    }
+  }
+
+  &ButtonCancel {
+    background: #7f4ead;
+    border: 1px solid #7f4ead;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    height: 38px;
+    width: 86px;
+  }
+
+  &ButtonApply {
+    background: #7f4ead;
+    border-radius: 5px;
+    border-width: 0;
+    color: #fff;
+    cursor: pointer;
+    height: 38px;
+    outline-width: 0;
+    width: 114px;
+  }
+}
+
+.disabled {
+  background: rgba(127, 78, 173, 0.11);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #7f4ead;
+  cursor: not-allowed;
+  font-size: 14px;
+  height: 38px;
+  outline-width: 0;
+}

@@ -1,0 +1,96 @@
+@import 'src/style/colors';
+@import 'src/style/fonts';
+@import '../../scss/mixins.scroll';
+
+.table {
+  :global(.ant-table-content) {
+    @include scrollbars(
+      5px,
+      rgba(138, 138, 138, 0.32),
+      rgba(138, 138, 138, 0.12)
+    );
+    border: 0 !important;
+    max-height: 60em;
+    overflow: auto;
+
+    > table {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    :global(:not(.ant-pagination-item) > a:not(.ant-pagination-item-link)) {
+      color: #0144ff;
+      font-size: $font-size-12;
+      text-decoration: none;
+    }
+  }
+
+  :global(.ant-table-thead > tr > th) {
+    background: transparent;
+    border-bottom: unset !important;
+    color: $color-secondary-text;
+    font-size: $font-size-12;
+    font-weight: 700;
+    height: 38px;
+    padding: 1rem 25px;
+  }
+
+  :global(.ant-table-thead > tr > th):nth-child(2) {
+    padding-left: 0;
+  }
+
+  :global(.ant-table-tbody > tr > td):first-child {
+    border: 0 !important;
+    color: $color-gray-dark;
+    font-size: $font-size-14;
+    font-weight: 400;
+    padding: 0 25px;
+  }
+
+  :global(.ant-table-tbody > tr > td) {
+    border: 0 !important;
+    color: $color-gray-dark;
+    font-size: $font-size-14;
+    font-weight: 400;
+    padding: 0;
+  }
+
+  :global(.ant-table-tbody > tr) {
+    height: 42px;
+  }
+
+  :global(.ant-table-tbody > tr) {
+    td {
+      background: $color-white !important;
+      box-shadow: inset 0 1px 0 $color-light-gray;
+    }
+  }
+
+  :global(.ant-table > tr) {
+    td {
+      background: $color-white !important;
+      box-shadow: inset 0 1px 0 $color-light-gray;
+    }
+  }
+
+  &.rounded {
+    :global(.ant-table) {
+      background: transparent;
+    }
+
+    :global(.ant-table-tbody > tr > td) {
+      border: unset;
+      border-radius: 0 0 5px 5px;
+    }
+
+    :global(.ant-table-thead > tr > th) {
+      background: $color-white;
+    }
+  }
+}
+
+.blur:nth-child(n + 5) {
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+}

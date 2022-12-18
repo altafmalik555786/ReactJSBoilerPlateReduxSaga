@@ -1,0 +1,78 @@
+@import 'src/style/colors';
+@import '/src/components/commonComponents/scss/mixins.utils.scss';
+
+.header {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding: 0 0.8rem;
+  transition: all 800ms ease;
+  width: max-content;
+
+  strong {
+    color: $color-secondary-text;
+    font-weight: 400;
+  }
+
+  span {
+    color: #121212;
+    font-weight: 500;
+
+    span {
+      color: $color-secondary-text;
+      margin-left: 2px;
+    }
+  }
+}
+
+.filterSelect {
+  border-left: 1px solid $color-white-secondary;
+  height: 100%;
+  margin-left: 8px;
+  max-width: 280px;
+  position: relative;
+}
+
+.filterCheckboxs {
+  background-color: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 5px 13px rgba(0, 14, 88, 0.2);
+  max-width: fit-content;
+  min-width: 280px;
+  padding: 0.3rem;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+
+  :global(.ant-checkbox-group) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  :global(.ant-checkbox-wrapper) {
+    white-space: nowrap;
+    width: 45%;
+  }
+
+  :global(.ant-checkbox-checked::after) {
+    background-color: $color-purple-medium;
+  }
+
+  :global(.ant-checkbox-checked .ant-checkbox-inner) {
+    background-color: $color-purple-medium;
+    border-color: $color-purple-medium;
+  }
+}
+
+.filterActions {
+  border-top: 1px solid $color-border;
+  @include flex-justify(space-evenly);
+  margin-bottom: 0.43rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  width: 100%;
+
+  button {
+    width: 45%;
+  }
+}

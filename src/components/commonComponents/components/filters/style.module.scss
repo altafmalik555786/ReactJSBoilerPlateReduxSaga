@@ -1,0 +1,158 @@
+.filters {
+  align-items: center;
+  background: #f7f7f8;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  @include flex-justify(center);
+  height: 32px;
+  padding: 7px 15px;
+  position: relative;
+  transition: all 0.35s ease-in-out;
+  width: max-content;
+  z-index: 3;
+
+  &:hover {
+    background-color: darken(#f7f7f8, 1.6%);
+  }
+
+  &Text {
+    margin-left: 6px;
+  }
+
+  &Items {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    color: #121212;
+    position: absolute;
+    right: 0;
+    top: 120%;
+    width: 200px;
+  }
+
+  &Item {
+    padding: 8px 20px;
+
+    &:hover {
+      background: rgba(127, 78, 173, 0.1);
+    }
+  }
+
+  &FilterPop {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    left: -260px;
+    padding: 15px 20px;
+    position: absolute;
+    top: 0;
+    width: 250px;
+    z-index: 3;
+
+    &Check {
+      display: flex;
+      padding-bottom: 11px;
+
+      :global(.ant-checkbox-wrapper) {
+        align-items: unset;
+      }
+
+      > p {
+        margin-bottom: 0;
+      }
+    }
+
+    &InputContainer {
+      border-bottom: 1px solid #e8e8e8;
+      margin-bottom: 1rem;
+      padding-bottom: 11px;
+    }
+
+    &Buttons {
+      @include flex-justify(space-between);
+    }
+
+    &ButtonCancel {
+      background: #f9f9fb;
+      border: 1px solid #e8e8e8;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 38px;
+      width: 86px;
+    }
+
+    &ButtonApply {
+      background: #7f4ead;
+      border-radius: 5px;
+      border-width: 0;
+      color: #fff;
+      cursor: pointer;
+      height: 38px;
+      outline-width: 0;
+      width: 114px;
+    }
+  }
+}
+
+.OptionContainer {
+  position: relative;
+}
+
+.input {
+  background: #f9f9fb;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  height: 38px;
+  width: 100%;
+}
+
+.addButton {
+  background-color: #ece4f3;
+  border-radius: 4px;
+  color: #3ca9cf;
+  cursor: pointer;
+  display: grid;
+  height: 32px;
+  place-items: center;
+  position: relative;
+  width: 76px;
+
+  &:hover {
+    background-color: darken(#ece4f3, 2%);
+    color: darken(#3ca9cf, 3%);
+  }
+}
+
+.chevron {
+  margin-left: 6px;
+
+  > svg {
+    transform: translateY(4px);
+    width: 18px;
+  }
+}
+
+.currentRow {
+  background: rgba(127, 78, 173, 0.1);
+}
+
+.disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.gray {
+  background-color: #dadddd;
+  opacity: 0.6;
+
+  &:hover {
+    background-color: #dadddd;
+    opacity: 0.6;
+  }
+}
+
+.filtersText {
+  color: #121212;
+}

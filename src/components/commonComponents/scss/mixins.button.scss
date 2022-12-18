@@ -1,0 +1,110 @@
+@import 'src/style/colors';
+@import 'src/style/fonts';
+
+@mixin button-default-styles {
+  background-color: #8e8e8e;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-16;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 7px 12px;
+  position: relative;
+  text-align: center;
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+}
+
+@mixin button-size-xs {
+  font-size: $font-size-14;
+  padding: 1px 7px;
+}
+
+@mixin button-size-sm {
+  padding: 4px 7px;
+}
+
+@mixin button-size-lg {
+  padding: 9px 23px;
+}
+
+@mixin button-primary {
+  background-color: $color-purple-medium;
+  border-color: $color-purple-medium;
+  color: #fff;
+}
+
+@mixin button-disabled {
+  opacity: 0.8;
+  pointer-events: none;
+}
+@mixin outline-button {
+  background-color: transparent !important;
+  font-family: Inter;
+  font-size: $font-size-14;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+}
+@mixin button-default-mixin {
+  height: 40px !important;
+  margin-bottom: 20px !important;
+}
+@mixin ant-btn-default {
+  background-color: $color-button-primary;
+  height: 40px !important;
+}
+@mixin ant-btn-lg {
+  justify-content: center;
+  align-items: center;
+  padding: 3px 10px 0 10px;
+  min-width: 313px;
+  margin-top: 10px;
+  font-weight: 400;
+  border-radius: 25px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  @include ant-btn-default;
+  &:hover {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+}
+@mixin google-btn {
+  justify-content: center !important;
+  min-width: 243px;
+  height: 40px;
+  margin-top: 30px;
+  font-weight: 400 !important;
+  border-radius: 25px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #bfbfbf !important;
+  font-size: 14px !important;
+  font-family: 'Inter', sans-serif !important;
+  color: rgb(0, 0, 0) !important;
+  box-shadow: none !important;
+  div {
+    background: transparent !important;
+    margin-top: 5px;
+  }
+}

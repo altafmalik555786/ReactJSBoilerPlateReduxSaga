@@ -1,0 +1,69 @@
+@import '../../scss/mixins.scroll';
+@import 'src/style/colors';
+
+.highlighted--green,
+.highlighted--yellow,
+.highlighted--red,
+.highlighted--gray {
+  border-radius: 3px;
+  padding: 0;
+}
+
+.highlighted--red {
+  background-color: rgba(255, 0, 66, 0.3) !important;
+}
+
+.highlighted--gray {
+  background-color: rgba(236, 236, 236, 1) !important;
+  // background-color: rgba(131, 131, 131, 0.3) !important;
+}
+
+.highlighted--yellow {
+  background-color: rgba(245, 166, 35, 0.3);
+}
+
+.highlighted--green {
+  background-color: rgba(51, 189, 109, 0.3) !important;
+}
+
+.ant-menu .ant-menu-item-selected {
+  background-color: transparent;
+  padding: 0;
+
+  a {
+    background-color: rgba(#b98ce4, 0.2) !important;
+    border-radius: 4px;
+  }
+}
+
+.ant-layout-sider-children {
+  border-right: 1px solid gray;
+  @include scrollbars(
+    5px,
+    rgba(138, 138, 138, 0.32),
+    rgba(138, 138, 138, 0.12)
+  );
+  overflow: overlay;
+}
+
+.ant-menu-item:active,
+.ant-menu-submenu-title:active {
+  background: #3ca8cf1e !important;
+}
+
+.ant-menu-submenu-arrow {
+  right: 8px;
+}
+
+.ant-menu-vertical .ant-menu-item-group-list .ant-menu-submenu-title,
+.ant-menu-vertical .ant-menu-submenu-title {
+  padding-right: 8px !important;
+}
+
+.ant-menu-submenu {
+  padding-bottom: 10px !important;
+}
+
+.ant-menu-sub.ant-menu-inline {
+  padding: 10px 0;
+}

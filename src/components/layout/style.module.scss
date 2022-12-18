@@ -1,0 +1,191 @@
+@import '/src//style/colors.scss';
+@import '../commonComponents/scss/mixins.scroll.scss';
+:global(.dashboard_logo__3DccG) {
+  background-color: $color-dark-logo !important;
+}
+:global(.ant-btn-primary) {
+  background-color: #3ca9cf !important;
+  font-size: 14px !important;
+}
+:global(.ant-form) {
+  background-color: transparent !important;
+}
+
+.logo {
+  padding: 5px 30px 17px 30px;
+  background-color: $color-dark-logo !important;
+  height: 60px !important;
+  width: 204px;
+}
+:global(.ant-menu) {
+  background-color: $color-white !important;
+}
+:global(.ant-layout-sider-trigger) {
+  display: none !important;
+}
+
+.iconDiv {
+  display: flex;
+  align-items: baseline;
+  p {
+    margin: 0;
+    padding-left: 10px;
+  }
+}
+:global(.ant-layout-sider-children) {
+  height: 100vh !important;
+}
+.siderCheck {
+  background-color: $color-white-primary;
+
+  &:global(.ant-layout-sider-dark) {
+    background-color: $color-white-primary !important;
+    // min-width: 230px !important;
+    border-right: 2px solid gray !important;
+    height: 100vh !important;
+  }
+}
+:global(.ant-layout) {
+  background-color: transparent !important;
+}
+
+.menuCheck {
+  height: 100%;
+  :global(.ant-menu-title-content) {
+    color: $color-input-grey;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &:global(.ant-menu) {
+    overflow-y: auto !important;
+    padding-bottom: 10px !important;
+    @include scrollbars($color-white-primary, #3ba9cf);
+
+    background-color: $color-dark-menu-item !important;
+    :global(.ant-menu-item) {
+      height: 47px !important;
+      background: $color-dark-menu-item;
+      a {
+        color: $color-white !important;
+        text-decoration: none;
+        line-height: 1.5;
+      }
+      span {
+      }
+      img {
+        fill: $color-seagreen-primary !important;
+        width: 25px;
+        padding-right: 10px;
+      }
+    }
+    :global(.ant-menu-submenu) {
+      background-color: $color-dark-menu-item !important;
+      span {
+        color: $color-white !important;
+      }
+      :global(.ant-menu-submenu-arrow) {
+        &::before {
+          background: $color-white !important;
+        }
+        &::after {
+          background: $color-white !important;
+        }
+      }
+      :global(.ant-menu-submenu-title:hover) {
+        background: $color-dark-menu-active !important;
+      }
+      :global(.ant-menu-inline.ant-menu-sub) {
+        background-color: $color-dark-menu-item !important;
+      }
+    }
+    :global(.ant-menu-sub) {
+      :global(.ant-menu-item-selected) {
+        background: linear-gradient(
+          to right,
+          #3e565f 3%,
+          #fff 3%,
+          #3e565f 0%
+        ) !important;
+      }
+      :global(.ant-menu-item-only-child) {
+        padding-left: 30px !important;
+        &:hover {
+          background: linear-gradient(
+            to right,
+            #3e565f 3%,
+            #fff 3%,
+            #3e565f 0%
+          ) !important;
+        }
+      }
+    }
+  }
+}
+.sitelayout {
+  background: $color-white;
+}
+:global(.ant-menu-item-selected) {
+  background: $color-dark-menu-active !important;
+}
+
+:global(.ant-menu-item:hover) {
+  background: $color-dark-menu-active !important;
+}
+
+:global(.ant-menu-sub .ant-menu-item:hover) {
+  background: $color-dark-menu-active !important;
+}
+
+:global(.ant-menu-submenu) {
+  :global(.ant-menu-submenu-title:hover) {
+    background: $color-dark-menu-active !important;
+  }
+}
+
+:global(.ant-menu-submenu-open) {
+  :global(.ant-menu-submenu-title) {
+    background: $color-dark-menu-active !important;
+  }
+}
+
+:global(.ant-menu .ant-menu-sub) {
+  margin-left: 29px;
+  width: 178px;
+  border-left: 2px solid rgb(112, 112, 112) !important;
+}
+// background: $color-background-dark;
+
+[data-theme='dark'] .iconColor {
+  color: $color-background-dark !important;
+}
+.New {
+  margin-left: -14px !important;
+  &:global(.ant-layout) {
+    height: 100vh;
+    overflow-y: auto;
+    @include scrollbars($color-white-primary, $color-seagreen-primary);
+  }
+}
+.hamburger {
+  cursor: pointer;
+  z-index: 1;
+  height: 30px;
+  width: 30px;
+  margin-top: 67px;
+  margin-left: -17px;
+  border-radius: 100px;
+  border: 2px solid rgb(206, 200, 200);
+  background: $color-seagreen-primary;
+  box-shadow: 0px 4px 16.74px $color-shadow;
+  :global(.anticon) {
+    color: white;
+  }
+}
+
+// background colors of pages
+
+tr:nth-child(2n) td {
+  background-color: #f6f6f6 !important;
+}

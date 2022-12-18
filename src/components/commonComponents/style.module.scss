@@ -1,0 +1,17 @@
+.tooltipLink {
+  background: rgb(246, 246, 246);
+  border: 5px solid #fff;
+  display: table-cell;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  width: 80px;
+}
+
+.checkboxFilterStyle {
+  margin: 21px 5px;
+
+  .filterCheckboxs {
+    margin-top: 30px !important;
+  }
+}

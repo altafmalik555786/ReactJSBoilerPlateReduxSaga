@@ -1,0 +1,77 @@
+@import '/src//style/colors.scss';
+.inputContainer {
+  background-color: white;
+  padding: 10px;
+}
+
+.input {
+  &:global(.ant-input) {
+    //   border: 1px solid #c4c4c4;
+    //   box-sizing: border-box;
+    //   border-radius: 5px;
+
+    //   font-style: normal;
+    //   height: 40px !important;
+    //   width: 100% !important;
+    //   font-weight: 400;
+    //   font-size: 14px;
+    //   line-height: 24px;
+    //   background-color: #ffff !important;
+    // }
+    height: 42px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid $color-gray-light !important;
+    box-shadow: none;
+    &:hover {
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+      border: 1px solid $color-seagreen-primary !important;
+      box-shadow: 0px 4px 16.74px $color-shadow !important;
+    }
+    &:focus {
+      border: 1px solid $color-seagreen-primary !important;
+      box-shadow: 0px 4px 16.74px $color-shadow !important;
+    }
+  }
+}
+:global(.ant-select) {
+  height: 42px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid $color-gray-light !important;
+  box-shadow: none;
+  &:hover {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    border: 1px solid $color-seagreen-primary !important;
+    box-shadow: 0px 4px 16.74px $color-shadow !important;
+  }
+  &:focus {
+    border: 1px solid $color-seagreen-primary !important;
+    box-shadow: 0px 4px 16.74px $color-shadow !important;
+  }
+}
+:global(.ant-picker) {
+  height: 42px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid $color-gray-light !important;
+  box-shadow: none;
+  &:hover {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    border: 1px solid $color-seagreen-primary !important;
+    box-shadow: 0px 4px 16.74px $color-shadow !important;
+  }
+  &:focus {
+    border: 1px solid $color-seagreen-primary !important;
+    box-shadow: 0px 4px 16.74px $color-shadow !important;
+  }
+}

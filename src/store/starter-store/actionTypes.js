@@ -1,0 +1,1 @@
+export const STARTER_TYPE = "STARTER_TYPE"

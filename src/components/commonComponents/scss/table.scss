@@ -1,0 +1,95 @@
+@import '/src//style/colors.scss';
+@import './mixins.scroll.scss';
+
+:global(.ant-table-wrapper) {
+  width: 100%;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  @include scrollbars($color-white-primary, $color-blue);
+  :global(.ant-table) {
+    background: transparent;
+    table {
+      width: 100%;
+      text-align: left;
+      border-radius: 10px 10px 0px 0px;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      tbody {
+        // background: $color-white;
+        :global(.ant-table-cell) {
+          padding: 10px;
+          border: 1px solid #f2f2f2;
+          background-color: white;
+        }
+        :global(.ant-table-row:nth-child(odd)) {
+          background: $color-white;
+        }
+      }
+      tr {
+        padding: 20px 14px;
+        :global(.ant-table-cell) {
+          font-size: 14px !important;
+          font-weight: 500;
+          text-transform: capitalize;
+          a {
+            color: #3f545fa3 !important;
+          }
+        }
+        :global(.ant-table-cell:last-child) {
+          span {
+            // display: flex;
+          }
+        }
+      }
+      td {
+        padding: 20px 14px;
+      }
+      th {
+        padding: 20px 14px;
+        background: $color-dark-head;
+        border-bottom: 1px solid $color-dark-head;
+        color: $color-white !important;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        &:before {
+          height: 0em !important;
+          background-color: $color-dark-head !important;
+        }
+      }
+    }
+  }
+}
+:global(.ant-pagination) {
+  float: right;
+  :global(.ant-pagination-item) {
+    background: transparent;
+    border: none;
+    a {
+      color: $color-seagreen-primary;
+    }
+    &:hover {
+      background: $color-seagreen-primary;
+      color: $color-white;
+      border-radius: 50%;
+      border: 1px solid $color-seagreen-primary;
+      transition: none;
+
+      a {
+        color: $color-white;
+      }
+    }
+  }
+  :global(.ant-pagination-item-active) {
+    background: $color-seagreen-primary;
+    color: $color-white;
+    border-radius: 50%;
+    border: 1px solid $color-seagreen-primary;
+    transition: none;
+
+    a {
+      color: $color-white;
+    }
+  }
+}

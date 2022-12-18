@@ -1,0 +1,10 @@
+@import './../../../scss/mixins.form';
+
+.input {
+  @include input-default-style;
+}
+
+.textarea {
+  @include input-default-style;
+  padding-top: 9px;
+}

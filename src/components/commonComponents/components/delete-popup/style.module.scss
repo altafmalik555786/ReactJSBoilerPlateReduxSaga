@@ -1,0 +1,39 @@
+// :global(.ant-modal-footer) {
+//   height: 50px;
+// }
+// :global(.ant-btn) {
+//   margin-right: 10px;
+// }
+@import '/src//style/colors.scss';
+:global(.ant-modal) {
+  width: 430px;
+  border-radius: 10px;
+  overflow: hidden;
+  :global(.ant-modal-content) {
+    border-radius: 10px;
+    background: $color-white;
+    :global(.ant-modal-close-x) {
+      color: $color-seagreen-primary;
+    }
+    :global(.ant-modal-header) {
+      border: none;
+    }
+    :global(.ant-modal-footer) {
+      height: 60px;
+      border: none;
+      :global(.ant-btn) {
+        border-radius: 20px;
+        line-height: 0;
+      }
+      :global(.ant-btn-default) {
+        &:hover {
+          color: $color-white;
+        }
+      }
+      :global(.ant-btn-primary) {
+        background: $color-red-primary;
+        border: none;
+      }
+    }
+  }
+}

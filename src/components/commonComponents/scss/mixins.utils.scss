@@ -1,0 +1,15 @@
+@mixin flex-justify($justify-content) {
+  display: flex;
+  justify-content: $justify-content;
+}
+@mixin ant-pagination-default {
+  float: right;
+  margin-top: 20px;
+}
+@mixin client-table {
+  padding-bottom: 50px;
+  :global(.ant-pagination) {
+    @include ant-pagination-default;
+    margin-right: 70px;
+  }
+}

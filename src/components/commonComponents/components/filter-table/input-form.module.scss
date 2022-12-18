@@ -1,0 +1,71 @@
+@import 'src/style/colors';
+@import '/src/components/commonComponents/scss/mixins.utils.scss';
+
+.inputForm {
+  background: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 5px 13px rgba(0, 14, 88, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-width: 324px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 2;
+
+  .formItem {
+    margin: 0 2px;
+    margin-bottom: 0;
+  }
+
+  .inputs {
+    display: flex;
+    padding: 20px;
+  }
+
+  .input {
+    &:global(.ant-input) {
+      background: $color-body-background;
+      border-radius: 5px;
+      height: 35px;
+      width: 133px;
+
+      &:hover {
+        border-color: $color-purple-medium;
+      }
+
+      &:focus {
+        border-color: $color-purple-medium;
+        box-shadow: 0;
+      }
+    }
+  }
+
+  .divider {
+    border-bottom: 1px solid $color-non-primary-text;
+    height: 1px;
+    margin: 5px auto;
+    width: 100%;
+    width: calc(100% - 10px);
+  }
+
+  .button {
+    @include flex-justify(flex-end);
+    padding: 15px 20px;
+
+    button {
+      margin-left: 10px;
+    }
+
+    .cancelBtn {
+      background: transparent;
+      border: 1px solid $color-white-secondary;
+      color: #323134;
+    }
+
+    .applyBtn {
+      background: $color-purple-medium;
+    }
+  }
+}
